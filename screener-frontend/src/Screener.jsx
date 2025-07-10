@@ -24,7 +24,7 @@ export default function Screener() {
 
   return (
     <>
-      <div>
+      <div class="mt-4">
         <ErrorBoundary
           fallback={(error, reset) => <ErrorPage error={error}></ErrorPage>}
         >

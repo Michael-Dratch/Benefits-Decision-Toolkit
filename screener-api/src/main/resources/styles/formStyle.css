@@ -1,0 +1,14 @@
+.fjs-container {
+  --font-size-group: 1.125rem;
+  --font-size-base: 1rem;
+  --font-size-input: 1rem;
+  --font-size-label: 1rem;
+  --line-height-base: normal;
+  --line-height-input: normal;
+  --line-height-label: normal;
+  --letter-spacing-base: normal;
+  --letter-spacing-input: normal;
+  --letter-spacing-label: normal;
+  --color-text-light: black;
+  --form-field-height: 2.25rem;
+}
