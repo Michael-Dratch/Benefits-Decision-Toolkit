@@ -1,11 +1,10 @@
 import { createSignal, createResource, ErrorBoundary } from "solid-js";
 import { useParams } from "@solidjs/router";
 import FormRenderer from "./FormRenderer";
-import Results from "./Results";
 import { fetchScreenerData, getDecisionResult } from "./api/api";
 import Loading from "./Loading";
 import ErrorPage from "./Error";
-import testData from "./testData";
+import EligibilityResults from "./EligibilityResults";
 
 export default function Screener() {
   const params = useParams();
@@ -17,7 +16,6 @@ export default function Screener() {
     try {
       let results = await getDecisionResult(params.screenerId, data);
       setResults(results);
-      console.log(results);
     } catch (err) {
       console.log(err);
     }
@@ -37,7 +35,7 @@ export default function Screener() {
                 submitForm={submitForm}
               ></FormRenderer>
               <div className="pt-4">
-                <Results results={results}></Results>
+                <EligibilityResults results={results}></EligibilityResults>
               </div>
             </>
           )}
