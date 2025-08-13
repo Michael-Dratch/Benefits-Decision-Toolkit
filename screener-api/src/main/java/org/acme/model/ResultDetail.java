@@ -10,6 +10,8 @@ public class ResultDetail {
     private Boolean result;
     private List<ResultDetail> checks;
     private String status;
+    private String info;
+    private String appLink;
 
     public String getId() {
         return id;
@@ -49,5 +51,21 @@ public class ResultDetail {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public String getAppLink() {
+        return appLink;
+    }
+
+    public void setAppLink(String appLink) {
+        this.appLink = appLink;
     }
 }

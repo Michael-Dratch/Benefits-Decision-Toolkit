@@ -1,5 +1,4 @@
-import { createSignal, Show, Index, Switch, Match, For } from "solid-js";
-import testData from "./testData.js";
+import { Switch, Match, For } from "solid-js";
 import checkIcon from "./assets/images/checkIcon.svg";
 import questionIcon from "./assets/images/questionIcon.svg";
 import xIcon from "./assets/images/xIcon.svg";
