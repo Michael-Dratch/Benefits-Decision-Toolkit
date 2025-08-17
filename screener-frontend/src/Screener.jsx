@@ -29,15 +29,18 @@ export default function Screener() {
         >
           {data.loading && <Loading></Loading>}
           {data() && (
-            <>
-              <FormRenderer
-                schema={data().formSchema}
-                submitForm={submitForm}
-              ></FormRenderer>
-              <div className="pt-4">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex-1 overflow-y-auto p-4">
+                <FormRenderer
+                  schema={data().formSchema}
+                  submitForm={submitForm}
+                ></FormRenderer>
+              </div>
+
+              <div className="flex-1 overflow-y-auto p-4">
                 <EligibilityResults results={results}></EligibilityResults>
               </div>
-            </>
+            </div>
           )}
         </ErrorBoundary>
       </div>
